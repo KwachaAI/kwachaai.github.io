@@ -748,13 +748,39 @@
 					align-items: flex-start;
 				}
 
+				.site-backdrop {
+					position: relative;
+					inset: auto;
+					z-index: 0;
+					width: calc(100% - 18px);
+					margin: 80px auto 0;
+					overflow: visible;
+				}
+
+				.site-backdrop__picture {
+					width: 100%;
+					height: auto;
+					aspect-ratio: 2752 / 1536;
+					overflow: hidden;
+					border-radius: 24px;
+					border: 1px solid rgba(255, 255, 255, 0.12);
+					background: #1b1713;
+					box-shadow: 0 18px 40px rgba(17, 20, 25, 0.18);
+				}
+
 				.site-backdrop__image {
-					object-position: center 40%;
-					transform: scale(1.01);
+					object-fit: contain;
+					object-position: center center;
+					transform: none;
+				}
+
+				.site-backdrop__veil,
+				.site-backdrop__grain {
+					display: none;
 				}
 
 				.hero-space {
-					min-height: 72svh;
+					display: none;
 				}
 
 				.hero,
@@ -797,6 +823,11 @@
 					media="(max-width: 720px)"
 					srcset="./assets/KwachaAI-wallpaper-mobile.webp"
 					type="image/webp"
+				/>
+				<source
+					media="(max-width: 720px)"
+					srcset="./assets/KwachaAI-wallpaper-mobile.jpg"
+					type="image/jpeg"
 				/>
 				<source srcset="./assets/KwachaAI-wallpaper-desktop.webp" type="image/webp" />
 				<img
