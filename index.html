@@ -103,11 +103,12 @@
 			}
 
 			.site-header {
-				position: sticky;
+				position: fixed;
 				top: 14px;
+				left: 50%;
+				transform: translateX(-50%);
 				z-index: 20;
 				width: min(1200px, calc(100% - 32px));
-				margin: 14px auto 0;
 				padding: 14px 18px;
 				display: flex;
 				align-items: center;
@@ -172,9 +173,13 @@
 				margin: 0 auto;
 			}
 
+			.hero-space {
+				min-height: 100vh;
+				min-height: 100svh;
+			}
+
 			.hero {
-				min-height: calc(100vh - 120px);
-				padding: 80px 0 56px;
+				padding: 28px 0 56px;
 				display: grid;
 				grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.74fr);
 				gap: 28px;
@@ -795,6 +800,8 @@
 			</header>
 
 			<main id="top">
+				<section class="hero-space" aria-hidden="true"></section>
+
 				<section class="hero">
 					<div class="hero__panel">
 						<div class="kicker">KwachaAI / soon in public view</div>
@@ -819,7 +826,7 @@
 
 					<aside class="hero__aside panel">
 						<div>
-							<h2>What’s coming</h2>
+							<h2>What's coming</h2>
 							<p>
 								A glass header, a live countdown, a simple waitlist form, and visual
 								product sections that can expand as KwachaAI gets closer to launch.
@@ -836,11 +843,11 @@
 								<span class="hero__stat-label">Public sections</span>
 							</div>
 							<div class="hero__stat">
-								<span class="hero__stat-value">∞</span>
+								<span class="hero__stat-value">Infinite</span>
 								<span class="hero__stat-label">Scroll depth</span>
 							</div>
 							<div class="hero__stat">
-								<span class="hero__stat-value">β</span>
+								<span class="hero__stat-value">Beta</span>
 								<span class="hero__stat-label">Waitlist access</span>
 							</div>
 						</div>
