@@ -70,21 +70,25 @@
 				overflow: hidden;
 			}
 
+			.site-backdrop__picture {
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+
 			.site-backdrop__image {
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
-				object-position: center 56%;
-				transform: scale(1.04);
-				filter: saturate(0.98) contrast(1.02) brightness(0.98);
+				object-position: center 54%;
+				transform: scale(1.03);
+				filter: saturate(1.03) contrast(1.06) brightness(1.02);
 			}
 
 			.site-backdrop__veil {
 				position: absolute;
 				inset: 0;
-				background:
-					linear-gradient(180deg, rgba(243, 236, 226, 0.18) 0%, rgba(243, 236, 226, 0.38) 36%, rgba(243, 236, 226, 0.88) 100%),
-					linear-gradient(180deg, rgba(17, 20, 25, 0.08) 0%, rgba(17, 20, 25, 0.16) 100%);
+				background: linear-gradient(180deg, rgba(17, 20, 25, 0.03) 0%, rgba(17, 20, 25, 0.1) 100%);
 			}
 
 			.site-backdrop__grain {
@@ -93,7 +97,7 @@
 				background-image: radial-gradient(rgba(255, 255, 255, 0.22) 1px, transparent 1px);
 				background-size: 3px 3px;
 				mix-blend-mode: soft-light;
-				opacity: 0.08;
+				opacity: 0.05;
 			}
 
 			.page-shell {
@@ -744,6 +748,15 @@
 					align-items: flex-start;
 				}
 
+				.site-backdrop__image {
+					object-position: center 40%;
+					transform: scale(1.01);
+				}
+
+				.hero-space {
+					min-height: 72svh;
+				}
+
 				.hero,
 				.section,
 				.footer {
@@ -779,7 +792,21 @@
 	</head>
 	<body>
 		<div class="site-backdrop" aria-hidden="true">
-			<img class="site-backdrop__image" src="./assets/KwachaAI-wallpaper.jpeg" alt="" />
+			<picture class="site-backdrop__picture">
+				<source
+					media="(max-width: 720px)"
+					srcset="./assets/KwachaAI-wallpaper-mobile.webp"
+					type="image/webp"
+				/>
+				<source srcset="./assets/KwachaAI-wallpaper-desktop.webp" type="image/webp" />
+				<img
+					class="site-backdrop__image"
+					src="./assets/KwachaAI-wallpaper-desktop.jpg"
+					alt=""
+					decoding="async"
+					fetchpriority="high"
+				/>
+			</picture>
 			<div class="site-backdrop__veil"></div>
 			<div class="site-backdrop__grain"></div>
 		</div>
