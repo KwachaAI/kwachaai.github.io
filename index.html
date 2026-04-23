@@ -1,71 +1,1079 @@
-<!DOCTYPE html>
-<html lang="en" class="dark">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KwachaAI | Autonomous Engineering Agent</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        gray: { 900: '#0f172a', 800: '#1e293b' }
-                    }
-                }
-            }
-        }
-    </script>
-</head>
-<body class="bg-gray-900 text-slate-300 font-sans antialiased min-h-screen flex flex-col">
-    
-    <!-- Top Warning Banner -->
-    <div class="bg-amber-500/10 border-b border-amber-500/20 text-amber-400 px-4 py-3 text-sm text-center">
-        <span class="font-bold">Official Notice:</span> KwachaAI is advanced agentic software, <strong>not</strong> a chatbot. Beware of unauthorized copycat sites (like kwachaai.com). This is the only official source.
-    </div>
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>KwachaAI | Public Launch Site</title>
+		<meta
+			name="description"
+			content="KwachaAI public launch site, docs, waitlist, and product previews."
+		/>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+			rel="stylesheet"
+		/>
+		<style>
+			:root {
+				color-scheme: light;
+				--bg: #f3ece2;
+				--bg-soft: #fbf7f0;
+				--panel: rgba(255, 255, 255, 0.76);
+				--panel-strong: rgba(255, 255, 255, 0.88);
+				--border: rgba(59, 44, 30, 0.12);
+				--ink: #171411;
+				--muted: #6b655d;
+				--accent: #d96b34;
+				--accent-strong: #b94f1e;
+				--shadow: 0 28px 70px rgba(21, 17, 12, 0.14);
+			}
 
-    <!-- Main Content -->
-    <main class="flex-grow flex items-center justify-center px-6 py-20">
-        <div class="max-w-3xl w-full text-center space-y-8">
-            
-            <!-- Logo / Header -->
-            <div class="inline-flex items-center justify-center p-4 bg-slate-800 rounded-2xl border border-slate-700 mb-4 shadow-xl">
-                <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M30 25 L30 75" stroke="#f8fafc" stroke-width="12" stroke-linecap="round"/>
-                    <path d="M70 25 L35 50 L70 75" stroke="#f8fafc" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-            </div>
-            
-            <h1 class="text-5xl md:text-6xl font-extrabold text-white tracking-tight">
-                KwachaAI <span class="block text-2xl md:text-3xl font-normal text-slate-400 mt-4">The dawn of autonomous coding.</span>
-            </h1>
-            
-            <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed">
-                We are building an elite engineering agent that operates at the repo level. 
-                Currently in closed development by Daztek.
-            </p>
+			* {
+				box-sizing: border-box;
+			}
 
-            <!-- CTA -->
-            <div class="pt-8">
-                <!-- Replace the href below with a link to a Google Form, or leave it as mailto -->
-                <a href="mailto:kwachaai@gmail.com?subject=Join Waitlist" 
-                   class="inline-block bg-white text-gray-900 font-semibold px-8 py-4 rounded-lg hover:bg-slate-200 transition-colors duration-200 shadow-lg shadow-white/10">
-                    Join the Private Beta Waitlist
-                </a>
-                <p class="mt-4 text-sm text-slate-500">Spots are strictly limited for early testing.</p>
-            </div>
-        </div>
-    </main>
+			html {
+				scroll-behavior: smooth;
+			}
 
-    <!-- Footer -->
-    <footer class="border-t border-slate-800 py-8 text-center text-sm text-slate-500">
-        <p>&copy; 2026 Daztek. All rights reserved.</p>
-        <div class="mt-4 space-x-4">
-            <a href="https://x.com/KwachaAI" class="hover:text-white transition-colors">X (Twitter)</a>
-            <a href="https://github.com/KwachaAI" class="hover:text-white transition-colors">GitHub</a>
-        </div>
-    </footer>
+			body {
+				margin: 0;
+				min-height: 100vh;
+				overflow-x: hidden;
+				background: var(--bg);
+				color: var(--ink);
+				font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+			}
 
-</body>
+			a {
+				color: inherit;
+				text-decoration: none;
+			}
+
+			button,
+			input,
+			textarea,
+			select {
+				font: inherit;
+			}
+
+			::selection {
+				background: rgba(217, 107, 52, 0.2);
+			}
+
+			.site-backdrop {
+				position: fixed;
+				inset: 0;
+				z-index: -3;
+				pointer-events: none;
+				overflow: hidden;
+			}
+
+			.site-backdrop__image {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				object-position: center 56%;
+				transform: scale(1.04);
+				filter: saturate(0.98) contrast(1.02) brightness(0.98);
+			}
+
+			.site-backdrop__veil {
+				position: absolute;
+				inset: 0;
+				background:
+					linear-gradient(180deg, rgba(243, 236, 226, 0.18) 0%, rgba(243, 236, 226, 0.38) 36%, rgba(243, 236, 226, 0.88) 100%),
+					linear-gradient(180deg, rgba(17, 20, 25, 0.08) 0%, rgba(17, 20, 25, 0.16) 100%);
+			}
+
+			.site-backdrop__grain {
+				position: absolute;
+				inset: 0;
+				background-image: radial-gradient(rgba(255, 255, 255, 0.22) 1px, transparent 1px);
+				background-size: 3px 3px;
+				mix-blend-mode: soft-light;
+				opacity: 0.08;
+			}
+
+			.page-shell {
+				position: relative;
+				z-index: 1;
+				padding-bottom: 64px;
+			}
+
+			.site-header {
+				position: sticky;
+				top: 14px;
+				z-index: 20;
+				width: min(1200px, calc(100% - 32px));
+				margin: 14px auto 0;
+				padding: 14px 18px;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				gap: 20px;
+				border-radius: 22px;
+				border: 1px solid rgba(255, 255, 255, 0.36);
+				background: rgba(255, 255, 255, 0.18);
+				backdrop-filter: blur(22px) saturate(180%);
+				-webkit-backdrop-filter: blur(22px) saturate(180%);
+				box-shadow: 0 20px 48px rgba(20, 16, 11, 0.12);
+			}
+
+			.brand {
+				display: inline-flex;
+				flex-direction: column;
+				gap: 2px;
+			}
+
+			.brand__name {
+				font-family: "Space Grotesk", "Inter", sans-serif;
+				font-size: 1.25rem;
+				font-weight: 700;
+				letter-spacing: -0.04em;
+			}
+
+			.brand__tag {
+				font-size: 0.86rem;
+				color: rgba(23, 20, 17, 0.68);
+			}
+
+			.site-nav {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 10px;
+				justify-content: flex-end;
+			}
+
+			.site-nav a {
+				padding: 10px 14px;
+				border-radius: 999px;
+				border: 1px solid rgba(23, 20, 17, 0.1);
+				background: rgba(255, 255, 255, 0.38);
+				color: rgba(23, 20, 17, 0.82);
+				font-size: 0.92rem;
+				font-weight: 600;
+				transition:
+					transform 180ms ease,
+					border-color 180ms ease,
+					background-color 180ms ease;
+			}
+
+			.site-nav a:hover {
+				transform: translateY(-1px);
+				border-color: rgba(217, 107, 52, 0.28);
+				background: rgba(255, 255, 255, 0.62);
+			}
+
+			.hero,
+			.section {
+				width: min(1200px, calc(100% - 32px));
+				margin: 0 auto;
+			}
+
+			.hero {
+				min-height: calc(100vh - 120px);
+				padding: 80px 0 56px;
+				display: grid;
+				grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.74fr);
+				gap: 28px;
+				align-items: end;
+				scroll-margin-top: 100px;
+			}
+
+			.hero__panel,
+			.panel {
+				background: var(--panel);
+				border: 1px solid var(--border);
+				border-radius: 28px;
+				box-shadow: var(--shadow);
+				backdrop-filter: blur(22px) saturate(160%);
+				-webkit-backdrop-filter: blur(22px) saturate(160%);
+			}
+
+			.hero__panel {
+				padding: 34px;
+				max-width: 660px;
+			}
+
+			.kicker {
+				display: inline-flex;
+				align-items: center;
+				gap: 10px;
+				padding: 8px 12px;
+				border-radius: 999px;
+				background: rgba(255, 255, 255, 0.5);
+				border: 1px solid rgba(23, 20, 17, 0.08);
+				font-size: 0.74rem;
+				font-weight: 700;
+				letter-spacing: 0.16em;
+				text-transform: uppercase;
+				color: var(--accent-strong);
+			}
+
+			.kicker::before {
+				content: "";
+				width: 8px;
+				height: 8px;
+				border-radius: 999px;
+				background: linear-gradient(135deg, #f39b50, #d6552b);
+				box-shadow: 0 0 0 5px rgba(217, 107, 52, 0.12);
+			}
+
+			h1,
+			h2,
+			h3 {
+				margin: 0;
+				font-family: "Space Grotesk", "Inter", sans-serif;
+				letter-spacing: -0.05em;
+			}
+
+			h1 {
+				margin-top: 14px;
+				font-size: clamp(3rem, 6vw, 5.25rem);
+				line-height: 0.93;
+			}
+
+			.hero__text {
+				margin: 16px 0 0;
+				max-width: 58ch;
+				font-size: 1.03rem;
+				line-height: 1.8;
+				color: var(--muted);
+			}
+
+			.hero__actions {
+				margin-top: 24px;
+				display: flex;
+				flex-wrap: wrap;
+				gap: 12px;
+			}
+
+			.button {
+				display: inline-flex;
+				align-items: center;
+				justify-content: center;
+				gap: 10px;
+				min-height: 48px;
+				padding: 0 18px;
+				border-radius: 999px;
+				border: 1px solid transparent;
+				font-weight: 700;
+				transition:
+					transform 180ms ease,
+					box-shadow 180ms ease,
+					border-color 180ms ease;
+			}
+
+			.button:hover {
+				transform: translateY(-1px);
+			}
+
+			.button--primary {
+				background: linear-gradient(135deg, #e77b3d, #c95321);
+				color: #fff;
+				box-shadow: 0 16px 30px rgba(201, 83, 33, 0.22);
+			}
+
+			.button--primary:hover {
+				box-shadow: 0 18px 34px rgba(201, 83, 33, 0.28);
+			}
+
+			.button--secondary {
+				background: rgba(255, 255, 255, 0.7);
+				border-color: rgba(23, 20, 17, 0.08);
+				color: var(--ink);
+			}
+
+			.hero__meta {
+				margin-top: 18px;
+				display: flex;
+				flex-wrap: wrap;
+				gap: 10px;
+			}
+
+			.chip {
+				padding: 9px 12px;
+				border-radius: 999px;
+				background: rgba(255, 255, 255, 0.52);
+				border: 1px solid rgba(23, 20, 17, 0.08);
+				color: rgba(23, 20, 17, 0.72);
+				font-size: 0.9rem;
+				font-weight: 600;
+			}
+
+			.hero__aside {
+				padding: 28px;
+				display: grid;
+				align-content: space-between;
+				gap: 18px;
+				min-height: 100%;
+			}
+
+			.hero__aside h2 {
+				font-size: 1.1rem;
+			}
+
+			.hero__aside p {
+				margin: 12px 0 0;
+				color: var(--muted);
+				line-height: 1.7;
+			}
+
+			.hero__stats {
+				display: grid;
+				grid-template-columns: repeat(2, minmax(0, 1fr));
+				gap: 12px;
+			}
+
+			.hero__stat {
+				padding: 14px;
+				border-radius: 20px;
+				background: rgba(255, 255, 255, 0.68);
+				border: 1px solid rgba(23, 20, 17, 0.08);
+			}
+
+			.hero__stat-value {
+				display: block;
+				font-family: "Space Grotesk", "Inter", sans-serif;
+				font-size: 1.55rem;
+				font-weight: 700;
+				letter-spacing: -0.05em;
+			}
+
+			.hero__stat-label {
+				display: block;
+				margin-top: 4px;
+				font-size: 0.84rem;
+				color: var(--muted);
+			}
+
+			.section {
+				margin-bottom: 28px;
+				scroll-margin-top: 108px;
+			}
+
+			.panel {
+				padding: 28px;
+			}
+
+			.panel__head {
+				display: flex;
+				align-items: end;
+				justify-content: space-between;
+				gap: 16px;
+				margin-bottom: 22px;
+			}
+
+			.panel__head h2 {
+				font-size: clamp(1.6rem, 2vw, 2.1rem);
+			}
+
+			.panel__head p {
+				margin: 0;
+				max-width: 48ch;
+				color: var(--muted);
+				line-height: 1.7;
+			}
+
+			.countdown-grid {
+				display: grid;
+				grid-template-columns: repeat(4, minmax(0, 1fr));
+				gap: 14px;
+			}
+
+			.countdown-tile {
+				padding: 18px;
+				border-radius: 22px;
+				background: rgba(255, 255, 255, 0.68);
+				border: 1px solid rgba(23, 20, 17, 0.08);
+			}
+
+			.countdown-value {
+				display: block;
+				font-family: "Space Grotesk", "Inter", sans-serif;
+				font-size: clamp(2rem, 4vw, 3.1rem);
+				line-height: 0.95;
+				font-weight: 700;
+				letter-spacing: -0.06em;
+			}
+
+			.countdown-label {
+				display: block;
+				margin-top: 8px;
+				font-size: 0.78rem;
+				font-weight: 700;
+				letter-spacing: 0.12em;
+				text-transform: uppercase;
+				color: var(--muted);
+			}
+
+			.countdown-note {
+				margin-top: 14px;
+				font-size: 0.95rem;
+				color: var(--muted);
+			}
+
+			.layout-two-col {
+				display: grid;
+				grid-template-columns: minmax(0, 1fr) minmax(320px, 460px);
+				gap: 20px;
+				align-items: start;
+			}
+
+			.section-list {
+				display: grid;
+				gap: 12px;
+				margin: 22px 0 0;
+				padding: 0;
+				list-style: none;
+			}
+
+			.section-list li {
+				display: flex;
+				gap: 12px;
+				align-items: flex-start;
+				color: var(--muted);
+				line-height: 1.7;
+			}
+
+			.section-list li::before {
+				content: "";
+				width: 10px;
+				height: 10px;
+				margin-top: 8px;
+				border-radius: 999px;
+				background: linear-gradient(135deg, #f39b50, #d6552b);
+				flex: 0 0 auto;
+			}
+
+			.form {
+				display: grid;
+				gap: 14px;
+			}
+
+			.field {
+				display: grid;
+				gap: 8px;
+			}
+
+			.field label {
+				font-size: 0.78rem;
+				font-weight: 800;
+				letter-spacing: 0.12em;
+				text-transform: uppercase;
+				color: rgba(23, 20, 17, 0.62);
+			}
+
+			.field input,
+			.field textarea,
+			.field select {
+				width: 100%;
+				border-radius: 16px;
+				border: 1px solid rgba(23, 20, 17, 0.12);
+				background: rgba(255, 255, 255, 0.9);
+				padding: 14px 16px;
+				color: var(--ink);
+				transition: border-color 180ms ease, box-shadow 180ms ease;
+			}
+
+			.field input:focus,
+			.field textarea:focus,
+			.field select:focus {
+				outline: none;
+				border-color: rgba(217, 107, 52, 0.45);
+				box-shadow: 0 0 0 4px rgba(217, 107, 52, 0.14);
+			}
+
+			.field textarea {
+				min-height: 110px;
+				resize: vertical;
+			}
+
+			.form-status {
+				min-height: 1.4em;
+				font-size: 0.95rem;
+				color: var(--accent-strong);
+			}
+
+			.device-layout {
+				display: grid;
+				grid-template-columns: minmax(0, 0.95fr) minmax(320px, 1.05fr);
+				gap: 20px;
+				align-items: center;
+			}
+
+			.device-panel {
+				display: grid;
+				gap: 14px;
+			}
+
+			.device-panel p {
+				margin: 0;
+				color: var(--muted);
+				line-height: 1.75;
+			}
+
+			.laptop {
+				margin: 0;
+			}
+
+			.laptop__screen {
+				position: relative;
+				aspect-ratio: 16 / 10;
+				border-radius: 28px;
+				padding: 18px;
+				background: linear-gradient(180deg, #314158 0%, #131b28 100%);
+				border: 14px solid #d7cab6;
+				box-shadow:
+					0 32px 60px rgba(9, 16, 31, 0.24),
+					inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+				overflow: hidden;
+			}
+
+			.laptop__screen::before {
+				content: "";
+				position: absolute;
+				inset: 14px;
+				border-radius: 18px;
+				background:
+					radial-gradient(circle at top right, rgba(255, 255, 255, 0.16), transparent 26%),
+					linear-gradient(145deg, rgba(20, 35, 54, 0.98), rgba(12, 18, 28, 0.98));
+				border: 1px solid rgba(255, 255, 255, 0.06);
+			}
+
+			.laptop__ui {
+				position: absolute;
+				inset: 32px;
+				display: grid;
+				grid-template-columns: 1.1fr 0.9fr;
+				gap: 12px;
+				z-index: 1;
+			}
+
+			.laptop__card {
+				border-radius: 18px;
+				border: 1px solid rgba(255, 255, 255, 0.08);
+				background: rgba(255, 255, 255, 0.06);
+				backdrop-filter: blur(12px);
+				-webkit-backdrop-filter: blur(12px);
+			}
+
+			.laptop__card--main {
+				padding: 18px;
+				display: grid;
+				gap: 14px;
+			}
+
+			.laptop__badge {
+				display: inline-flex;
+				align-self: start;
+				padding: 7px 10px;
+				border-radius: 999px;
+				background: rgba(217, 107, 52, 0.18);
+				color: #ffd8c2;
+				font-size: 0.74rem;
+				font-weight: 800;
+				letter-spacing: 0.14em;
+				text-transform: uppercase;
+			}
+
+			.laptop__line {
+				height: 12px;
+				border-radius: 999px;
+				background: rgba(255, 255, 255, 0.12);
+			}
+
+			.laptop__line--long {
+				width: 86%;
+			}
+
+			.laptop__line--medium {
+				width: 68%;
+			}
+
+			.laptop__line--short {
+				width: 52%;
+			}
+
+			.laptop__stack {
+				display: grid;
+				gap: 10px;
+			}
+
+			.laptop__mini {
+				padding: 16px;
+				display: grid;
+				align-content: start;
+				gap: 10px;
+			}
+
+			.laptop__mini-title {
+				font-size: 0.75rem;
+				font-weight: 800;
+				letter-spacing: 0.12em;
+				text-transform: uppercase;
+				color: rgba(255, 255, 255, 0.56);
+			}
+
+			.laptop__metric {
+				display: block;
+				font-family: "Space Grotesk", "Inter", sans-serif;
+				font-size: 1.6rem;
+				font-weight: 700;
+				letter-spacing: -0.05em;
+				color: #fff;
+			}
+
+			.laptop__base {
+				height: 18px;
+				width: 84%;
+				margin: 0 auto;
+				border-radius: 0 0 22px 22px;
+				background: linear-gradient(180deg, #b9a995, #8c7b67);
+				box-shadow: 0 12px 28px rgba(9, 16, 31, 0.16);
+				transform: translateY(-2px);
+			}
+
+			.features-grid {
+				display: grid;
+				grid-template-columns: repeat(3, minmax(0, 1fr));
+				gap: 18px;
+			}
+
+			.feature-card {
+				padding: 18px;
+				background: var(--panel);
+				border: 1px solid var(--border);
+				border-radius: 24px;
+				box-shadow: var(--shadow);
+				backdrop-filter: blur(20px) saturate(160%);
+				-webkit-backdrop-filter: blur(20px) saturate(160%);
+			}
+
+			.feature-card__visual {
+				position: relative;
+				aspect-ratio: 16 / 10;
+				margin-bottom: 16px;
+				border-radius: 18px;
+				overflow: hidden;
+				border: 1px solid rgba(23, 20, 17, 0.08);
+				background: linear-gradient(135deg, rgba(217, 107, 52, 0.24), rgba(53, 104, 158, 0.2));
+			}
+
+			.feature-card__visual::before,
+			.feature-card__visual::after {
+				content: "";
+				position: absolute;
+				border-radius: 999px;
+				filter: blur(10px);
+			}
+
+			.feature-card__visual::before {
+				inset: auto auto 18% 12%;
+				width: 52%;
+				height: 18%;
+				background: rgba(255, 255, 255, 0.44);
+				transform: rotate(-8deg);
+			}
+
+			.feature-card__visual::after {
+				inset: 16% 18% auto auto;
+				width: 24%;
+				height: 24%;
+				background: rgba(255, 255, 255, 0.34);
+			}
+
+			.feature-card h3 {
+				font-size: 1.15rem;
+				margin-bottom: 8px;
+			}
+
+			.feature-card p {
+				margin: 0;
+				color: var(--muted);
+				line-height: 1.7;
+			}
+
+			.footer {
+				width: min(1200px, calc(100% - 32px));
+				margin: 14px auto 0;
+				padding: 20px 4px 0;
+				display: flex;
+				justify-content: space-between;
+				gap: 16px;
+				flex-wrap: wrap;
+				color: rgba(23, 20, 17, 0.7);
+				font-size: 0.92rem;
+			}
+
+			.footer a {
+				font-weight: 600;
+			}
+
+			@media (max-width: 960px) {
+				.hero,
+				.layout-two-col,
+				.device-layout,
+				.features-grid {
+					grid-template-columns: 1fr;
+				}
+
+				.hero {
+					min-height: auto;
+					padding-top: 56px;
+				}
+
+				.hero__aside {
+					min-height: auto;
+				}
+			}
+
+			@media (max-width: 720px) {
+				.site-header {
+					width: calc(100% - 18px);
+					padding: 14px;
+					top: 9px;
+					flex-direction: column;
+					align-items: flex-start;
+				}
+
+				.hero,
+				.section,
+				.footer {
+					width: calc(100% - 18px);
+				}
+
+				.hero__panel,
+				.panel {
+					padding: 22px;
+				}
+
+				h1 {
+					font-size: clamp(2.7rem, 12vw, 4rem);
+				}
+
+				.countdown-grid,
+				.hero__stats {
+					grid-template-columns: 1fr 1fr;
+				}
+			}
+
+			@media (max-width: 520px) {
+				.countdown-grid,
+				.hero__stats {
+					grid-template-columns: 1fr;
+				}
+
+				.site-nav {
+					justify-content: flex-start;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="site-backdrop" aria-hidden="true">
+			<img class="site-backdrop__image" src="./assets/KwachaAI-wallpaper.jpeg" alt="" />
+			<div class="site-backdrop__veil"></div>
+			<div class="site-backdrop__grain"></div>
+		</div>
+
+		<div class="page-shell">
+			<header class="site-header">
+				<a class="brand" href="#top" aria-label="KwachaAI home">
+					<span class="brand__name">KwachaAI</span>
+					<span class="brand__tag">Public launch site and docs</span>
+				</a>
+
+				<nav class="site-nav" aria-label="Primary">
+					<a href="#launch">Launch</a>
+					<a href="#waitlist">Waitlist</a>
+					<a href="#studio">Studio</a>
+					<a href="#features">Features</a>
+				</nav>
+			</header>
+
+			<main id="top">
+				<section class="hero">
+					<div class="hero__panel">
+						<div class="kicker">KwachaAI / soon in public view</div>
+						<h1>The workspace is nearly ready.</h1>
+						<p class="hero__text">
+							This page is the front door for KwachaAI: launch updates, public docs, the
+							waitlist, and product previews. The wallpaper behind it stays fixed while the
+							content scrolls over the top.
+						</p>
+
+						<div class="hero__actions">
+							<a class="button button--primary" href="#waitlist">Join waitlist</a>
+							<a class="button button--secondary" href="#launch">See countdown</a>
+						</div>
+
+						<div class="hero__meta" aria-label="Highlights">
+							<span class="chip">Launch site</span>
+							<span class="chip">Docs</span>
+							<span class="chip">Product previews</span>
+						</div>
+					</div>
+
+					<aside class="hero__aside panel">
+						<div>
+							<h2>What’s coming</h2>
+							<p>
+								A glass header, a live countdown, a simple waitlist form, and visual
+								product sections that can expand as KwachaAI gets closer to launch.
+							</p>
+						</div>
+
+						<div class="hero__stats">
+							<div class="hero__stat">
+								<span class="hero__stat-value">01</span>
+								<span class="hero__stat-label">Fixed hero backdrop</span>
+							</div>
+							<div class="hero__stat">
+								<span class="hero__stat-value">04</span>
+								<span class="hero__stat-label">Public sections</span>
+							</div>
+							<div class="hero__stat">
+								<span class="hero__stat-value">∞</span>
+								<span class="hero__stat-label">Scroll depth</span>
+							</div>
+							<div class="hero__stat">
+								<span class="hero__stat-value">β</span>
+								<span class="hero__stat-label">Waitlist access</span>
+							</div>
+						</div>
+					</aside>
+				</section>
+
+				<section class="section" id="launch">
+					<article class="panel">
+						<div class="panel__head">
+							<div>
+								<h2>Launch countdown</h2>
+								<p>
+									Keep the public launch date here. The timer updates automatically in the
+									browser.
+								</p>
+							</div>
+							<p class="countdown-note">Set once, keep visible on the home page.</p>
+						</div>
+
+						<div class="countdown-grid" data-countdown data-launch-at="2026-06-30T12:00:00+00:00">
+							<div class="countdown-tile">
+								<span class="countdown-value" data-countdown-days>--</span>
+								<span class="countdown-label">Days</span>
+							</div>
+							<div class="countdown-tile">
+								<span class="countdown-value" data-countdown-hours>--</span>
+								<span class="countdown-label">Hours</span>
+							</div>
+							<div class="countdown-tile">
+								<span class="countdown-value" data-countdown-minutes>--</span>
+								<span class="countdown-label">Minutes</span>
+							</div>
+							<div class="countdown-tile">
+								<span class="countdown-value" data-countdown-seconds>--</span>
+								<span class="countdown-label">Seconds</span>
+							</div>
+						</div>
+					</article>
+				</section>
+
+				<section class="section" id="waitlist">
+					<div class="panel layout-two-col">
+						<div>
+							<div class="panel__head">
+								<div>
+									<h2>Join the waitlist</h2>
+									<p>
+										Capture interest early. This is a simple static form scaffold that can be
+										swapped for your mailing provider later.
+									</p>
+								</div>
+							</div>
+
+							<ul class="section-list">
+								<li>Public updates when the site and docs go live.</li>
+								<li>Early access for the first people testing KwachaAI.</li>
+								<li>One place for product pages, release notes, and docs.</li>
+							</ul>
+						</div>
+
+						<form class="form" id="waitlist-form">
+							<div class="field">
+								<label for="waitlist-name">Name</label>
+								<input id="waitlist-name" name="name" autocomplete="name" placeholder="Daz" />
+							</div>
+							<div class="field">
+								<label for="waitlist-email">Email</label>
+								<input
+									id="waitlist-email"
+									name="email"
+									type="email"
+									autocomplete="email"
+									placeholder="you@example.com"
+									required
+								/>
+							</div>
+							<div class="field">
+								<label for="waitlist-focus">What are you most interested in?</label>
+								<select id="waitlist-focus" name="focus">
+									<option>Product updates</option>
+									<option>Docs and guides</option>
+									<option>Early access</option>
+								</select>
+							</div>
+							<button class="button button--primary" type="submit">Join waitlist</button>
+							<p class="form-status" aria-live="polite" data-form-status></p>
+						</form>
+					</div>
+				</section>
+
+				<section class="section" id="studio">
+					<div class="panel device-layout">
+						<div class="device-panel">
+							<div class="panel__head">
+								<div>
+									<h2>Laptop running Kwacha</h2>
+									<p>
+										This section is ready for the PNG mockup. For now it uses a polished
+										laptop frame so the layout is already in place.
+									</p>
+								</div>
+							</div>
+
+							<p>
+								When you drop in the final laptop image, this panel can become the product
+								showcase for the desktop app in action.
+							</p>
+						</div>
+
+						<figure class="laptop">
+							<div class="laptop__screen" aria-hidden="true">
+								<div class="laptop__ui">
+									<div class="laptop__card laptop__card--main">
+										<span class="laptop__badge">KwachaAI Desktop</span>
+										<div class="laptop__line laptop__line--long"></div>
+										<div class="laptop__line laptop__line--medium"></div>
+										<div class="laptop__line laptop__line--short"></div>
+									</div>
+
+									<div class="laptop__stack">
+										<div class="laptop__card laptop__mini">
+											<span class="laptop__mini-title">Workspace</span>
+											<span class="laptop__metric">Pinned</span>
+										</div>
+										<div class="laptop__card laptop__mini">
+											<span class="laptop__mini-title">Status</span>
+											<span class="laptop__metric">Ready</span>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="laptop__base" aria-hidden="true"></div>
+						</figure>
+					</div>
+				</section>
+
+				<section class="section" id="features">
+					<div class="panel">
+						<div class="panel__head">
+							<div>
+								<h2>Feature visuals</h2>
+								<p>
+									These panels are designed to hold feature images or editorials once you add
+									them.
+								</p>
+							</div>
+						</div>
+
+						<div class="features-grid">
+							<article class="feature-card">
+								<div class="feature-card__visual" aria-hidden="true"></div>
+								<h3>Launch surface</h3>
+								<p>Fast first impression for the product and the docs you want people to read.</p>
+							</article>
+
+							<article class="feature-card">
+								<div class="feature-card__visual" aria-hidden="true"></div>
+								<h3>Workspace preview</h3>
+								<p>Space for screenshots of the app, the shell, and the way KwachaAI works.</p>
+							</article>
+
+							<article class="feature-card">
+								<div class="feature-card__visual" aria-hidden="true"></div>
+								<h3>Feature stories</h3>
+								<p>Use this space for feature images, release highlights, and small explainers.</p>
+							</article>
+						</div>
+					</div>
+				</section>
+			</main>
+
+			<footer class="footer">
+				<div>© 2026 KwachaAI</div>
+				<div>
+					<a href="#top">Back to top</a>
+				</div>
+			</footer>
+		</div>
+
+		<script>
+			const countdownRoot = document.querySelector("[data-countdown]");
+			const daysNode = document.querySelector("[data-countdown-days]");
+			const hoursNode = document.querySelector("[data-countdown-hours]");
+			const minutesNode = document.querySelector("[data-countdown-minutes]");
+			const secondsNode = document.querySelector("[data-countdown-seconds]");
+			const launchAt = new Date(countdownRoot?.dataset.launchAt ?? "");
+
+			function format(value) {
+				return String(Math.max(0, value)).padStart(2, "0");
+			}
+
+			function setCountdownZero() {
+				daysNode.textContent = "00";
+				hoursNode.textContent = "00";
+				minutesNode.textContent = "00";
+				secondsNode.textContent = "00";
+			}
+
+			function updateCountdown() {
+				if (Number.isNaN(launchAt.getTime())) {
+					setCountdownZero();
+					return;
+				}
+
+				const diff = launchAt.getTime() - Date.now();
+				if (diff <= 0) {
+					setCountdownZero();
+					return;
+				}
+
+				const totalSeconds = Math.floor(diff / 1000);
+				const days = Math.floor(totalSeconds / 86400);
+				const hours = Math.floor((totalSeconds % 86400) / 3600);
+				const minutes = Math.floor((totalSeconds % 3600) / 60);
+				const seconds = totalSeconds % 60;
+
+				daysNode.textContent = format(days);
+				hoursNode.textContent = format(hours);
+				minutesNode.textContent = format(minutes);
+				secondsNode.textContent = format(seconds);
+			}
+
+			updateCountdown();
+			window.setInterval(updateCountdown, 1000);
+
+			const waitlistForm = document.querySelector("#waitlist-form");
+			const waitlistStatus = document.querySelector("[data-form-status]");
+
+			waitlistForm?.addEventListener("submit", (event) => {
+				event.preventDefault();
+				waitlistStatus.textContent = "You're on the list. We’ll follow up when launch details are ready.";
+				waitlistForm.reset();
+			});
+		</script>
+	</body>
 </html>
