@@ -914,6 +914,10 @@ button {
     display: none;
   }
 
+  .navbar__cta {
+    display: none;
+  }
+
   .navbar__mobile-toggle {
     display: flex;
   }
