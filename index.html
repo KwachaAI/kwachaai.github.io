@@ -1,24 +1,31 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Primary Meta Tags -->
   <title>KwachaAI — Your AI Desktop Workspace for Work, Study & Code</title>
-  <meta name="description" content="KwachaAI is a free AI-powered desktop app that helps you work, study, and code — all in one workspace. Powered by the world's leading AI models. Made in Zambia." />
+  <meta name="title" content="KwachaAI — Your AI Desktop Workspace for Work, Study & Code" />
+  <meta name="description"
+    content="KwachaAI is a free AI-powered desktop app that helps you work, study, and code — all in one workspace. Powered by the world's leading AI models. Made in Zambia." />
   <meta name="theme-color" content="#08080c" />
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="KwachaAI — AI Desktop Workspace" />
-  <meta property="og:description" content="Free AI-powered desktop app for work, study & code. Powered by the world's best AI models. Made in Zambia." />
+  <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://kwachaai.github.io" />
-  <meta property="og:image" content="https://kwachaai.github.io/assets/hero3.png" />
+  <meta property="og:url" content="https://kwachaai.github.io/" />
+  <meta property="og:title" content="KwachaAI — Your AI Desktop Workspace" />
+  <meta property="og:description"
+    content="Free AI-powered desktop app for work, study & code. Powered by the world's best AI models. Made in Zambia." />
+  <meta property="og:image" content="https://kwachaai.github.io/assets/hero1.png" />
 
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="KwachaAI — AI Desktop Workspace" />
-  <meta name="twitter:description" content="Free AI-powered desktop app for work, study & code." />
-  <meta name="twitter:image" content="https://kwachaai.github.io/assets/hero3.png" />
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://kwachaai.github.io/" />
+  <meta property="twitter:title" content="KwachaAI — Your AI Desktop Workspace" />
+  <meta property="twitter:description"
+    content="Free AI-powered desktop app for work, study & code. Powered by the world's best AI models. Made in Zambia." />
+  <meta property="twitter:image" content="https://kwachaai.github.io/assets/hero1.png" />
 
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="./assets/favicon.ico" />
@@ -26,422 +33,513 @@
 
   <link rel="stylesheet" href="./styles.css" />
 </head>
+
 <body>
 
-<!-- Background effects -->
-<div class="bg-grid" aria-hidden="true"></div>
-<div class="bg-glow" aria-hidden="true"></div>
+  <!-- Background effects -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow" aria-hidden="true"></div>
 
-<!-- ================================================================
+  <!-- ================================================================
      NAVBAR
      ================================================================ -->
-<nav class="navbar" role="navigation" aria-label="Main navigation">
-  <div class="container navbar__inner">
-    <a href="#" class="navbar__brand" aria-label="KwachaAI home">
-      <img src="./assets/kwacha-icon.png" alt="KwachaAI" class="navbar__logo" width="32" height="32" />
-      KwachaAI
-    </a>
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <div class="container navbar__inner">
+      <a href="#" class="navbar__brand" aria-label="KwachaAI home">
+        <img src="./assets/kwacha-icon.png" alt="KwachaAI" class="navbar__logo" width="32" height="32" />
+        KwachaAI
+      </a>
 
-    <ul class="navbar__links" id="nav-links">
-      <li><a href="#features" class="navbar__link">Features</a></li>
-      <li><a href="#modes" class="navbar__link">Modes</a></li>
-      <li><a href="#showcase" class="navbar__link">Showcase</a></li>
-    </ul>
+      <ul class="navbar__links" id="nav-links">
+        <li><a href="#features" class="navbar__link">Features</a></li>
+        <li><a href="#modes" class="navbar__link">Modes</a></li>
+        <li><a href="#showcase" class="navbar__link">Showcase</a></li>
+      </ul>
 
-    <a href="#download" class="navbar__cta">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-      Download
-    </a>
+      <a href="#download" class="navbar__cta">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+          <polyline points="7 10 12 15 17 10" />
+          <line x1="12" y1="15" x2="12" y2="3" />
+        </svg>
+        Download
+      </a>
 
-    <button class="navbar__mobile-toggle" id="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-    </button>
-  </div>
-</nav>
+      <button class="navbar__mobile-toggle" id="mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <line x1="3" y1="12" x2="21" y2="12" />
+          <line x1="3" y1="18" x2="21" y2="18" />
+        </svg>
+      </button>
+    </div>
+  </nav>
 
-<!-- ================================================================
+  <!-- ================================================================
      HERO
      ================================================================ -->
-<section class="hero section" id="hero">
-  <div class="container">
-    <div class="hero__badge reveal">
-      <span class="hero__badge-dot"></span>
-      Now in Public Preview — Free to use
-    </div>
-
-    <h1 class="hero__title reveal">
-      Your AI workspace<br/>
-      for <span class="hero__title-accent">everything.</span>
-    </h1>
-
-    <p class="hero__subtitle reveal">
-      KwachaAI is a powerful desktop app that gives you an AI-powered workspace
-      for work, study, and code — all in one place. Use the world's best AI models.
-      Free during preview. No cloud lock-in.
-    </p>
-
-    <div class="hero__actions reveal">
-      <a href="https://kwachaai.alwaysdata.net/updates/KwachaAI-Setup-latest.exe" class="btn btn--primary" id="hero-download-btn">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-        Download for Windows
-      </a>
-      <a href="#features" class="btn btn--secondary">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
-        See what's inside
-      </a>
-    </div>
-
-    <div class="hero__screenshot-wrapper reveal">
-      <div class="hero__carousel" id="hero-carousel">
-        <img
-          src="./assets/hero3.webp"
-          alt="KwachaAI Work Mode showing planning, writing, and task management tools"
-          class="hero__carousel-slide hero__carousel-slide--active"
-          loading="eager"
-          fetchpriority="high"
-          decoding="async"
-        />
-        <img
-          src="./assets/hero2.webp"
-          alt="KwachaAI Study Mode showing lesson notes, explanations, and practice exercises"
-          class="hero__carousel-slide"
-          loading="eager"
-          decoding="async"
-        />
-        <img
-          src="./assets/hero1.webp"
-          alt="KwachaAI Code Mode showing a file explorer, editor, and terminal"
-          class="hero__carousel-slide"
-          loading="eager"
-          decoding="async"
-        />
+  <section class="hero section" id="hero">
+    <div class="container">
+      <div class="hero__badge reveal">
+        <span class="hero__badge-dot"></span>
+        Now in Public Preview — Free to use
       </div>
 
-      <!-- Mode indicator pills -->
-      <div class="hero__carousel-indicators" id="hero-indicators">
-        <button class="hero__carousel-pill hero__carousel-pill--active" data-index="0" type="button" aria-label="Work Mode">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/></svg>
-          Work
-        </button>
-        <button class="hero__carousel-pill" data-index="1" type="button" aria-label="Study Mode">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/></svg>
-          Study
-        </button>
-        <button class="hero__carousel-pill" data-index="2" type="button" aria-label="Code Mode">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
-          Code
-        </button>
-      </div>
+      <h1 class="hero__title reveal">
+        Your AI workspace<br />
+        for <span class="hero__title-accent">everything.</span>
+      </h1>
 
-      <div class="hero__screenshot-glow" aria-hidden="true"></div>
-    </div>
-  </div>
-</section>
+      <p class="hero__subtitle reveal">
+        KwachaAI is a powerful desktop app that gives you an AI-powered workspace
+        for work, study, and code — all in one place. Use the world's best AI models.
+        Free during preview. No cloud lock-in.
+      </p>
 
-<!-- ================================================================
-     TRUST BAR
-     ================================================================ -->
-<section class="trust reveal" aria-label="Supported AI providers">
-  <div class="container">
-    <p class="trust__label">Powered by the world's best AI models</p>
-    <div class="trust__logos">
-      <span class="trust__logo">OpenAI</span>
-      <span class="trust__logo">Anthropic</span>
-      <span class="trust__logo">Google Gemini</span>
-    </div>
-  </div>
-</section>
-
-<!-- ================================================================
-     FEATURES
-     ================================================================ -->
-<section class="features section" id="features">
-  <div class="container">
-    <div class="features__header reveal">
-      <p class="section__eyebrow">✦ Features</p>
-      <h2 class="section__title">Everything you need.<br/>Nothing you don't.</h2>
-      <p class="section__subtitle">A clean, powerful workspace that adapts to what you're doing — whether that's writing a report, studying chemistry, or debugging a Node.js app.</p>
-    </div>
-
-    <div class="features__grid">
-      <div class="feature-card reveal">
-        <div class="feature-card__icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-        </div>
-        <h3 class="feature-card__title">Desktop-Native</h3>
-        <p class="feature-card__desc">Not a browser tab. A real app that runs on your machine with file access, shell commands, and offline support. Feels fast because it is.</p>
-      </div>
-
-      <div class="feature-card reveal">
-        <div class="feature-card__icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-        </div>
-        <h3 class="feature-card__title">Multi-Model</h3>
-        <p class="feature-card__desc">Switch between GPT-4o, Claude, Gemini, Copilot, and more. Use your own API keys or sign in with OAuth. No middleman pricing.</p>
-      </div>
-
-      <div class="feature-card reveal">
-        <div class="feature-card__icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-        </div>
-        <h3 class="feature-card__title">Built-in Code Editor</h3>
-        <p class="feature-card__desc">A full workspace with file explorer, syntax highlighting, and an AI that reads, edits, and creates files directly in your project.</p>
-      </div>
-
-      <div class="feature-card reveal">
-        <div class="feature-card__icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-        </div>
-        <h3 class="feature-card__title">Rich Artifacts</h3>
-        <p class="feature-card__desc">The AI creates interactive HTML, Markdown documents, PDFs, spreadsheets, and more — all rendered right in the workspace.</p>
-      </div>
-
-      <div class="feature-card reveal">
-        <div class="feature-card__icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        </div>
-        <h3 class="feature-card__title">Web Search</h3>
-        <p class="feature-card__desc">The AI can search the web for current information, read documentation, and cite sources — so you get accurate, up-to-date answers.</p>
-      </div>
-
-      <div class="feature-card reveal">
-        <div class="feature-card__icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
-        </div>
-        <h3 class="feature-card__title">Private &amp; Secure</h3>
-        <p class="feature-card__desc">Your data stays on your machine. No telemetry, no cloud storage, no account required. API keys are stored locally and never shared.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================================================================
-     THREE MODES
-     ================================================================ -->
-<section class="modes section" id="modes">
-  <div class="container">
-    <div class="features__header reveal">
-      <p class="section__eyebrow">⚡ Three Modes</p>
-      <h2 class="section__title">One app. Three superpowers.</h2>
-      <p class="section__subtitle">Switch between modes instantly. Each one is purpose-built with specialized tools, prompts, and workflows.</p>
-    </div>
-
-    <div class="modes__grid">
-      <div class="mode-card reveal">
-        <div class="mode-card__icon">
-          <!-- BriefcaseBusiness (lucide) -->
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="7" rx="2"/><path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16"/><path d="M2 13h20"/><path d="M7 13v2"/><path d="M17 13v2"/></svg>
-        </div>
-        <h3 class="mode-card__name">Work Mode</h3>
-        <p class="mode-card__desc">Turn rough ideas into polished deliverables — plans, reports, briefs, emails, spreadsheets, and presentations. Systematic, execution-focused AI for professionals.</p>
-      </div>
-
-      <div class="mode-card reveal">
-        <div class="mode-card__icon">
-          <!-- BookOpenText (lucide) -->
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z"/><path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z"/><path d="M6 8h2"/><path d="M6 12h2"/><path d="M16 8h2"/><path d="M16 12h2"/></svg>
-        </div>
-        <h3 class="mode-card__name">Study Mode</h3>
-        <p class="mode-card__desc">Learn any subject with an AI tutor that adapts to your level. Step-by-step explanations, practice quizzes, flashcards, and visual aids — designed for deep understanding.</p>
-      </div>
-
-      <div class="mode-card reveal">
-        <div class="mode-card__icon">
-          <!-- Code2 (lucide) -->
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4"/><path d="m6 8-4 4 4 4"/><path d="m14.5 4-5 16"/></svg>
-        </div>
-        <h3 class="mode-card__name">Code Mode</h3>
-        <p class="mode-card__desc">An AI coding assistant that reads your repo, writes clean code, runs tests, and verifies its own work. Like pair programming with a senior engineer.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================================================================
-     SHOWCASE
-     ================================================================ -->
-<section class="showcase section" id="showcase">
-  <div class="container">
-    <div class="features__header reveal">
-      <p class="section__eyebrow">✦ See It In Action</p>
-      <h2 class="section__title">Built for real work.</h2>
-      <p class="section__subtitle">Not a toy. A professional-grade AI workspace used by developers, students, and professionals across Africa and beyond.</p>
-    </div>
-
-    <div class="showcase__content reveal">
-      <div class="showcase__text">
-        <h3 class="section__title" style="font-size: 1.5rem; margin-bottom: 16px;">Workspace that adapts to you</h3>
-        <p class="section__subtitle" style="text-align: left; margin-inline: 0;">
-          Open a project folder and KwachaAI becomes your full development environment — with a file tree, tabbed editor, integrated terminal, and an AI that understands your codebase. Switch to Study mode and it becomes your personal tutor. Switch to Work mode and it's your executive assistant.
-        </p>
-      </div>
-      <div class="showcase__visual">
-        <img
-          src="./assets/side-image.webp"
-          alt="KwachaAI workspace layout adapting to a project-centered view"
-          style="width: 100%; height: 100%; object-fit: contain;"
-          loading="lazy"
-          decoding="async"
-        />
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================================================================
-     GALLERY — Built with KwachaAI
-     ================================================================ -->
-<section class="gallery section" id="gallery">
-  <div class="container">
-    <div class="features__header reveal">
-      <p class="section__eyebrow">✦ Gallery</p>
-      <h2 class="section__title">Built with KwachaAI</h2>
-      <p class="section__subtitle">Six recent screenshots that show how KwachaAI fits work, study, and code without forcing a new workflow.</p>
-    </div>
-
-    <div class="gallery__grid reveal">
-      <div class="gallery__item">
-        <img src="./assets/small1.webp" alt="Snake.io-style game built with KwachaAI" loading="lazy" decoding="async" />
-        <div class="gallery__caption">Snake.io-Style Game</div>
-      </div>
-
-      <div class="gallery__item">
-        <img src="./assets/small2.webp" alt="3D Frogger game built with KwachaAI" loading="lazy" decoding="async" />
-        <div class="gallery__caption">3D Frogger</div>
-      </div>
-
-      <div class="gallery__item">
-        <img src="./assets/small3.webp" alt="Dashboard built with KwachaAI" loading="lazy" decoding="async" />
-        <div class="gallery__caption">Dashboard</div>
-      </div>
-
-      <div class="gallery__item">
-        <img src="./assets/small4.webp" alt="Music player built with KwachaAI" loading="lazy" decoding="async" />
-        <div class="gallery__caption">Music Player</div>
-      </div>
-
-      <div class="gallery__item">
-        <img src="./assets/small5.webp" alt="Kwacha currency tracker built with KwachaAI" loading="lazy" decoding="async" />
-        <div class="gallery__caption">Kwacha Currency Tracker</div>
-      </div>
-
-      <div class="gallery__item">
-        <img src="./assets/small6.webp" alt="Typing tutor built with KwachaAI" loading="lazy" decoding="async" />
-        <div class="gallery__caption">Typing Tutor</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================================================================
-     DOWNLOAD CTA
-     ================================================================ -->
-<section class="cta section" id="download">
-  <div class="container">
-    <div class="cta__card reveal">
-      <h2 class="cta__title">Ready to get started?</h2>
-      <p class="cta__subtitle">Download KwachaAI for free. No account needed. Just install and go.</p>
-      <div class="cta__actions">
-        <a href="https://kwachaai.alwaysdata.net/updates/KwachaAI-Setup-latest.exe" class="btn btn--primary" id="download-btn">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+      <div class="hero__actions reveal">
+        <a href="https://kwachaai.alwaysdata.net/updates/KwachaAI-Setup-latest.exe" class="btn btn--primary"
+          id="hero-download-btn">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+            <polyline points="7 10 12 15 17 10" />
+            <line x1="12" y1="15" x2="12" y2="3" />
+          </svg>
           Download for Windows
         </a>
         <a href="#features" class="btn btn--secondary">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 16 16 12 12 8"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
-          Learn More
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9" />
+          </svg>
+          See what's inside
         </a>
       </div>
-      <p class="cta__note">Windows 10+ · Free during preview · Auto-updates included</p>
-    </div>
-  </div>
-</section>
 
-<!-- ================================================================
+      <div class="hero__screenshot-wrapper reveal">
+        <div class="hero__carousel" id="hero-carousel">
+          <img src="./assets/hero1.webp" alt="KwachaAI Code Mode showing a file explorer, editor, and AI terminal"
+            class="hero__carousel-slide hero__carousel-slide--active" loading="eager" fetchpriority="high"
+            decoding="async" />
+          <img src="./assets/hero3.webp" alt="KwachaAI Work Mode showing planning, writing, and task management tools"
+            class="hero__carousel-slide" loading="eager" decoding="async" />
+          <img src="./assets/hero2.webp"
+            alt="KwachaAI Study Mode showing lesson notes, explanations, and practice exercises"
+            class="hero__carousel-slide" loading="eager" decoding="async" />
+        </div>
+
+        <!-- Mode indicator pills -->
+        <div class="hero__carousel-indicators" id="hero-indicators">
+          <button class="hero__carousel-pill hero__carousel-pill--active" data-index="0" type="button"
+            aria-label="Code Mode">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="m18 16 4-4-4-4" />
+              <path d="m6 8-4 4 4 4" />
+              <path d="m14.5 4-5 16" />
+            </svg>
+            Code
+          </button>
+          <button class="hero__carousel-pill" data-index="1" type="button" aria-label="Work Mode">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect width="20" height="14" x="2" y="7" rx="2" />
+              <path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16" />
+            </svg>
+            Work
+          </button>
+          <button class="hero__carousel-pill" data-index="2" type="button" aria-label="Study Mode">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z" />
+              <path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z" />
+            </svg>
+            Study
+          </button>
+        </div>
+
+        <div class="hero__screenshot-glow" aria-hidden="true"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+     TRUST BAR
+     ================================================================ -->
+  <section class="trust reveal" aria-label="Supported AI providers">
+    <div class="container">
+      <p class="trust__label">Powered by the world's best AI models</p>
+      <div class="trust__logos">
+        <span class="trust__logo">OpenAI</span>
+        <span class="trust__logo">Anthropic</span>
+        <span class="trust__logo">Google Gemini</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+     FEATURES
+     ================================================================ -->
+  <section class="features section" id="features">
+    <div class="container">
+      <div class="features__header reveal">
+        <p class="section__eyebrow">✦ Features</p>
+        <h2 class="section__title">Everything you need.<br />Nothing you don't.</h2>
+        <p class="section__subtitle">A clean, powerful workspace that adapts to what you're doing — whether that's
+          writing a report, studying chemistry, or debugging a Node.js app.</p>
+      </div>
+
+      <div class="features__grid">
+        <div class="feature-card reveal">
+          <div class="feature-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2" />
+              <line x1="8" y1="21" x2="16" y2="21" />
+              <line x1="12" y1="17" x2="12" y2="21" />
+            </svg>
+          </div>
+          <h3 class="feature-card__title">Desktop-Native</h3>
+          <p class="feature-card__desc">Not a browser tab. A real app that runs on your machine with file access, shell
+            commands, and offline support. Feels fast because it is.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M12 2L2 7l10 5 10-5-10-5z" />
+              <path d="M2 17l10 5 10-5" />
+              <path d="M2 12l10 5 10-5" />
+            </svg>
+          </div>
+          <h3 class="feature-card__title">Multi-Model</h3>
+          <p class="feature-card__desc">Switch between GPT-4o, Claude, Gemini, Copilot, and more. Use your own API keys
+            or sign in with OAuth. No middleman pricing.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <polyline points="16 18 22 12 16 6" />
+              <polyline points="8 6 2 12 8 18" />
+            </svg>
+          </div>
+          <h3 class="feature-card__title">Built-in Code Editor</h3>
+          <p class="feature-card__desc">A full workspace with file explorer, syntax highlighting, and an AI that reads,
+            edits, and creates files directly in your project.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+              <polyline points="14 2 14 8 20 8" />
+              <line x1="16" y1="13" x2="8" y2="13" />
+              <line x1="16" y1="17" x2="8" y2="17" />
+            </svg>
+          </div>
+          <h3 class="feature-card__title">Rich Artifacts</h3>
+          <p class="feature-card__desc">The AI creates interactive HTML, Markdown documents, PDFs, spreadsheets, and
+            more — all rendered right in the workspace.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+          </div>
+          <h3 class="feature-card__title">Web Search</h3>
+          <p class="feature-card__desc">The AI can search the web for current information, read documentation, and cite
+            sources — so you get accurate, up-to-date answers.</p>
+        </div>
+
+        <div class="feature-card reveal">
+          <div class="feature-card__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" />
+              <path d="M7 11V7a5 5 0 0110 0v4" />
+            </svg>
+          </div>
+          <h3 class="feature-card__title">Private &amp; Secure</h3>
+          <p class="feature-card__desc">Your data stays on your machine. No telemetry, no cloud storage, no account
+            required. API keys are stored locally and never shared.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+     THREE MODES
+     ================================================================ -->
+  <section class="modes section" id="modes">
+    <div class="container">
+      <div class="features__header reveal">
+        <p class="section__eyebrow">⚡ Three Modes</p>
+        <h2 class="section__title">One app. Three superpowers.</h2>
+        <p class="section__subtitle">Switch between modes instantly. Each one is purpose-built with specialized tools,
+          prompts, and workflows.</p>
+      </div>
+
+      <div class="modes__grid">
+        <div class="mode-card reveal">
+          <div class="mode-card__icon">
+            <!-- BriefcaseBusiness (lucide) -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"
+              stroke-linejoin="round">
+              <rect width="20" height="14" x="2" y="7" rx="2" />
+              <path d="M16 21V5a2 2 0 00-2-2h-4a2 2 0 00-2 2v16" />
+              <path d="M2 13h20" />
+              <path d="M7 13v2" />
+              <path d="M17 13v2" />
+            </svg>
+          </div>
+          <h3 class="mode-card__name">Work Mode</h3>
+          <p class="mode-card__desc">Turn rough ideas into polished deliverables — plans, reports, briefs, emails,
+            spreadsheets, and presentations. Systematic, execution-focused AI for professionals.</p>
+        </div>
+
+        <div class="mode-card reveal">
+          <div class="mode-card__icon">
+            <!-- BookOpenText (lucide) -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M2 3h6a4 4 0 014 4v14a3 3 0 00-3-3H2z" />
+              <path d="M22 3h-6a4 4 0 00-4 4v14a3 3 0 013-3h7z" />
+              <path d="M6 8h2" />
+              <path d="M6 12h2" />
+              <path d="M16 8h2" />
+              <path d="M16 12h2" />
+            </svg>
+          </div>
+          <h3 class="mode-card__name">Study Mode</h3>
+          <p class="mode-card__desc">Learn any subject with an AI tutor that adapts to your level. Step-by-step
+            explanations, practice quizzes, flashcards, and visual aids — designed for deep understanding.</p>
+        </div>
+
+        <div class="mode-card reveal">
+          <div class="mode-card__icon">
+            <!-- Code2 (lucide) -->
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="m18 16 4-4-4-4" />
+              <path d="m6 8-4 4 4 4" />
+              <path d="m14.5 4-5 16" />
+            </svg>
+          </div>
+          <h3 class="mode-card__name">Code Mode</h3>
+          <p class="mode-card__desc">An AI coding assistant that reads your repo, writes clean code, runs tests, and
+            verifies its own work. Like pair programming with a senior engineer.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+     SHOWCASE
+     ================================================================ -->
+  <section class="showcase section" id="showcase">
+    <div class="container">
+      <div class="features__header reveal">
+        <p class="section__eyebrow">✦ See It In Action</p>
+        <h2 class="section__title">Built for real work.</h2>
+        <p class="section__subtitle">Not a toy. A professional-grade AI workspace used by developers, students, and
+          professionals across Africa and beyond.</p>
+      </div>
+
+      <div class="showcase__content reveal">
+        <div class="showcase__text">
+          <h3 class="section__title" style="font-size: 1.5rem; margin-bottom: 16px;">Workspace that adapts to you</h3>
+          <p class="section__subtitle" style="text-align: left; margin-inline: 0;">
+            Open a project folder and KwachaAI becomes your full development environment — with a file tree, tabbed
+            editor, integrated terminal, and an AI that understands your codebase. Switch to Study mode and it becomes
+            your personal tutor. Switch to Work mode and it's your executive assistant.
+          </p>
+        </div>
+        <div class="showcase__visual">
+          <img src="./assets/side-image.webp" alt="KwachaAI workspace layout adapting to a project-centered view"
+            style="width: 100%; height: 100%; object-fit: contain;" loading="lazy" decoding="async" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+     GALLERY — Built with KwachaAI
+     ================================================================ -->
+  <section class="gallery section" id="gallery">
+    <div class="container">
+      <div class="features__header reveal">
+        <p class="section__eyebrow">✦ Gallery</p>
+        <h2 class="section__title">Built with KwachaAI</h2>
+        <p class="section__subtitle">Six recent screenshots that show how KwachaAI fits work, study, and code without
+          forcing a new workflow.</p>
+      </div>
+
+      <div class="gallery__grid reveal">
+        <div class="gallery__item">
+          <img src="./assets/small1.webp" alt="Snake.io-style game built with KwachaAI" loading="lazy"
+            decoding="async" />
+          <div class="gallery__caption">Snake.io-Style Game</div>
+        </div>
+
+        <div class="gallery__item">
+          <img src="./assets/small2.webp" alt="3D Frogger game built with KwachaAI" loading="lazy" decoding="async" />
+          <div class="gallery__caption">3D Frogger</div>
+        </div>
+
+        <div class="gallery__item">
+          <img src="./assets/small3.webp" alt="Dashboard built with KwachaAI" loading="lazy" decoding="async" />
+          <div class="gallery__caption">Dashboard</div>
+        </div>
+
+        <div class="gallery__item">
+          <img src="./assets/small4.webp" alt="Music player built with KwachaAI" loading="lazy" decoding="async" />
+          <div class="gallery__caption">Music Player</div>
+        </div>
+
+        <div class="gallery__item">
+          <img src="./assets/small5.webp" alt="Kwacha currency tracker built with KwachaAI" loading="lazy"
+            decoding="async" />
+          <div class="gallery__caption">Kwacha Currency Tracker</div>
+        </div>
+
+        <div class="gallery__item">
+          <img src="./assets/small6.webp" alt="Typing tutor built with KwachaAI" loading="lazy" decoding="async" />
+          <div class="gallery__caption">Typing Tutor</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
+     DOWNLOAD CTA
+     ================================================================ -->
+  <section class="cta section" id="download">
+    <div class="container">
+      <div class="cta__card reveal">
+        <h2 class="cta__title">Ready to get started?</h2>
+        <p class="cta__subtitle">Download KwachaAI for free. No account needed. Just install and go.</p>
+        <div class="cta__actions">
+          <a href="https://kwachaai.alwaysdata.net/updates/KwachaAI-Setup-latest.exe" class="btn btn--primary"
+            id="download-btn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+            Download for Windows
+          </a>
+          <a href="#features" class="btn btn--secondary">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <polyline points="12 16 16 12 12 8" />
+              <line x1="8" y1="12" x2="16" y2="12" />
+            </svg>
+            Learn More
+          </a>
+        </div>
+        <p class="cta__note">Windows 10+ · Free during preview · Auto-updates included</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================
      FOOTER
      ================================================================ -->
-<footer class="footer">
-  <div class="container footer__inner">
-    <div class="footer__brand">
-      <img src="./assets/kwacha-icon.png" alt="KwachaAI" width="24" height="24" style="border-radius: 6px;" />
-      KwachaAI
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <img src="./assets/kwacha-icon.png" alt="KwachaAI" width="24" height="24" style="border-radius: 6px;" />
+        KwachaAI
+      </div>
+      <ul class="footer__links">
+        <li><a href="#features" class="footer__link">Features</a></li>
+        <li><a href="#modes" class="footer__link">Modes</a></li>
+        <li><a href="#download" class="footer__link">Download</a></li>
+      </ul>
+      <p class="footer__copy">Built with ❤️ in Zambia by <strong>Daz L.</strong></p>
     </div>
-    <ul class="footer__links">
-      <li><a href="#features" class="footer__link">Features</a></li>
-      <li><a href="#modes" class="footer__link">Modes</a></li>
-      <li><a href="#download" class="footer__link">Download</a></li>
-    </ul>
-    <p class="footer__copy">Built with ❤️ in Zambia by <strong>Daz L.</strong></p>
-  </div>
-</footer>
+  </footer>
 
-<!-- ================================================================
+  <!-- ================================================================
      SCRIPTS
      ================================================================ -->
-<script>
-  // Mobile menu toggle
-  const toggle = document.getElementById('mobile-toggle');
-  const navLinks = document.getElementById('nav-links');
-  toggle?.addEventListener('click', () => {
-    const open = navLinks.classList.toggle('open');
-    toggle.setAttribute('aria-expanded', String(open));
-  });
-
-  // Scroll reveal
-  const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry, i) => {
-      if (entry.isIntersecting) {
-        setTimeout(() => entry.target.classList.add('visible'), i * 80);
-        observer.unobserve(entry.target);
-      }
+  <script>
+    // Mobile menu toggle
+    const toggle = document.getElementById('mobile-toggle');
+    const navLinks = document.getElementById('nav-links');
+    toggle?.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      toggle.setAttribute('aria-expanded', String(open));
     });
-  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-  reveals.forEach(el => observer.observe(el));
 
-  // Smooth scroll for anchor links
-  document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener('click', (e) => {
-      const target = document.querySelector(link.getAttribute('href'));
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: 'smooth' });
-        navLinks?.classList.remove('open');
-      }
-    });
-  });
-  // ------ Hero carousel crossfade ------
-  (() => {
-    const slides = document.querySelectorAll('.hero__carousel-slide');
-    const pills = document.querySelectorAll('.hero__carousel-pill');
-    if (!slides.length) return;
+    // Scroll reveal
+    const reveals = document.querySelectorAll('.reveal');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => entry.target.classList.add('visible'), i * 80);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    reveals.forEach(el => observer.observe(el));
 
-    let current = 0;
-    let timer;
-    const INTERVAL = 4000; // 4 seconds
-
-    function goTo(index) {
-      slides[current].classList.remove('hero__carousel-slide--active');
-      pills[current].classList.remove('hero__carousel-pill--active');
-      current = index % slides.length;
-      slides[current].classList.add('hero__carousel-slide--active');
-      pills[current].classList.add('hero__carousel-pill--active');
-    }
-
-    function startAutoplay() {
-      clearInterval(timer);
-      timer = setInterval(() => goTo(current + 1), INTERVAL);
-    }
-
-    pills.forEach((pill) => {
-      pill.addEventListener('click', () => {
-        goTo(Number(pill.dataset.index));
-        startAutoplay();
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', (e) => {
+        const target = document.querySelector(link.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth' });
+          navLinks?.classList.remove('open');
+        }
       });
     });
+    // ------ Hero carousel crossfade ------
+    (() => {
+      const slides = document.querySelectorAll('.hero__carousel-slide');
+      const pills = document.querySelectorAll('.hero__carousel-pill');
+      if (!slides.length) return;
 
-    startAutoplay();
-  })();
-</script>
+      let current = 0;
+      let timer;
+      const INTERVAL = 4000; // 4 seconds
+
+      function goTo(index) {
+        slides[current].classList.remove('hero__carousel-slide--active');
+        pills[current].classList.remove('hero__carousel-pill--active');
+        current = index % slides.length;
+        slides[current].classList.add('hero__carousel-slide--active');
+        pills[current].classList.add('hero__carousel-pill--active');
+      }
+
+      function startAutoplay() {
+        clearInterval(timer);
+        timer = setInterval(() => goTo(current + 1), INTERVAL);
+      }
+
+      pills.forEach((pill) => {
+        pill.addEventListener('click', () => {
+          goTo(Number(pill.dataset.index));
+          startAutoplay();
+        });
+      });
+
+      startAutoplay();
+    })();
+  </script>
 
 </body>
+
 </html>
