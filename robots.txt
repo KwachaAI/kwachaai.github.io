@@ -1,12 +1,5 @@
-# KwachaAI - Official Website
-# https://kwachaai.github.io/
-
 User-agent: *
 Allow: /
 Disallow: /.git/
 
-# Sitemap
 Sitemap: https://kwachaai.github.io/sitemap.xml
-
-# Crawl-delay (be polite to our GitHub Pages hosting)
-Crawl-delay: 1
