@@ -828,6 +828,40 @@ button {
 }
 
 /* ===================================================================
+   FAQ
+   =================================================================== */
+.faq__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-8);
+  margin-top: var(--space-12);
+}
+
+.faq__item {
+  background: var(--bg-card);
+  padding: var(--space-8);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-default);
+}
+
+.faq__question {
+  font-size: var(--space-5);
+  font-weight: 600;
+  margin-bottom: var(--space-4);
+  color: var(--text-primary);
+}
+
+.faq__answer {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.faq__answer strong {
+  color: var(--accent);
+}
+
+/* ===================================================================
    FOOTER
    =================================================================== */
 .footer {
